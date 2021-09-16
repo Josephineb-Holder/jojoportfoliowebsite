@@ -1,25 +1,71 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react"
+// eslint-disable-next-line
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import Home from "./components/Home"
+import Skills from "./components/Skills"
+import Resume from "./components/Resume"
+import Contact from "./components/Contact"
+import About from "./components/About"
+import Connect from "./components/Connect"
+import Navbar from "./components/Navbar/Navbar"
+import Footer from "./components/Footer"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
 
-export default App;
+   
+      <div className="page-container">
+          <div className="content-wrap">
+         
+      
+      <Router>
+  
+      
+        <Navbar />
+  
+        <Switch>
+          <Route path="/" component={Home} exact>
+            <Home /> 
+  
+          </Route>
+          <Route path="/skills" component={Skills} exact>
+            <Skills /> 
+  
+          </Route>
+          <Route path="/resume" component={Resume} exact>
+            <Resume /> 
+  
+          </Route>
+          <Route path="/contact" component={Contact} exact>
+            <Contact /> 
+  
+          </Route>
+          <Route path="/about" component={About} exact>
+            <About /> 
+  
+          </Route>
+  
+          <Route path="/Connect" component={Connect} exact>
+            <Connect /> 
+  
+          </Route>
+  
+          <Route path="/Footer" component={Footer} exact>
+            <Footer /> 
+  
+          </Route>
+        </Switch>
+        
+      </Router>
+        </div>
+      <Footer />
+        </div>
+     )
+  
+    
+  }
+  
+  
+  
+
+export default App

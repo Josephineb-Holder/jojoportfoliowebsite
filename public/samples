@@ -1,0 +1,14 @@
+ position: absolute;
+    font-size: 30px;
+    color: white;
+    background-color: #00828c;
+    border: none;
+    outline: none;
+    top: 15px;
+    right: 25px;
+
+    <div class=" p-3 shadow-sm">
+    <div class="d-flex align-items-center">
+     <img className="img-fluid" src={` ${process.env.PUBLIC_URL}/assets/images/jojo.jpeg`} alt="jojo" />
+    </div>
+</div>

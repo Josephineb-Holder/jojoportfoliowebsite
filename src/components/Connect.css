@@ -1,0 +1,8 @@
+.form-control:focus{
+    border-color: green;
+    box-shadow: 0 0 0 0.1rem #8ebdb1;
+}
+
+.checkbox:focus{
+    background-color: green;
+}
